@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none; /* tirando o estilo da lista, PONTINHO */
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%; /* altura da linha */
+}
+
+body {
+    background-image: url(/src/imagens/background.jpg);
+    background-position: top center;   /* imagem fica no top e centralizado */
+    background-size: 100% auto; /* 100% na horizontal e o restante superior e inferior seja automatica */
+    background-repeat: no-repeat; /* ṕara não ficar repetindo o background */
+    background-color: #121214; /* cor conforme o projeto figma */
+}
+
+main {
+    max-width: 500px; /* medida no figma */ 
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    color: #fff;    
+}
+
+section h2 {
+    font-size: 26px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-size: 17px;
+    line-height: 160%;
+    color: #A1A1AA;
+}
+
+ul {
+    display: flex;
+}
