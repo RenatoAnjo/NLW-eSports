@@ -22,13 +22,31 @@ body {
 }
 
 main {
-    max-width: 500px; /* medida no figma */ 
+    max-width: 689px; /* medida no figma */ 
     width: 90%;
     margin: auto;
+    /* 
+    display: grid;
+    gap: 24px;
+    */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
 }
 
 section {
     color: #fff;    
+    background: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
 }
 
 section h2 {
@@ -37,11 +55,34 @@ section h2 {
 }
 
 section p {
-    font-size: 17px;
-    line-height: 160%;
+    letter-spacing: -0.18px;
     color: #A1A1AA;
 }
 
-ul {
-    display: flex;
+section ul {
+    display: flex; /* display tem haver com as visualizacao das caixas */
+    flex-wrap: wrap; /* se houver muitos cards essa propriedade joga para baixo, chegando no limite */
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.lista-games img {
+    border-radius: 8px;
+    width: 90%;
+}
+
+.lista-canal img {
+    width: 70px;
+    border-radius: 50%;
+    border: #A1A1AA solid 2px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+header {
+    background-color: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
 }
