@@ -13,6 +13,30 @@ body * {
     line-height: 160%; /* altura da linha */
 }
 
+header img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+header {
+    padding-top: 32px;
+    height: calc(150px + 32px);
+}
+
+header div img  {
+    width: 150px;
+    margin: auto;
+    background: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
 body {
     background-image: url(/src/imagens/background.jpg);
     background-position: top center;   /* imagem fica no top e centralizado */
@@ -24,7 +48,7 @@ body {
 main {
     max-width: 689px; /* medida no figma */ 
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
     /* 
     display: grid;
     gap: 24px;
@@ -66,6 +90,15 @@ section ul {
     margin-top: 24px;
 }
 
+/* transicionando meus jogos, canais e streamers e redes*/
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
 .lista-games img {
     border-radius: 8px;
     width: 90%;
@@ -74,15 +107,52 @@ section ul {
 .lista-canal img {
     width: 70px;
     border-radius: 50%;
-    border: #A1A1AA solid 2px;
+    border: #443354 2px;
 }
 
-header img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+/* animação */ 
+
+header div img {
+    animation: fromTop 7s .2s backwards; /* espera um 1s para comecar as animacoes */
+
 }
 
-header {
-    background-color: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    } /* de */
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } /* para */ 
+}
+
+main section {
+    animation: fromBottom 1s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
